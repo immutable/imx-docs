@@ -1,23 +1,207 @@
-/**
- * CSS files with the .module.css suffix will be treated as CSS modules
- * and scoped locally.
- */
-
-.heroBanner {
-  padding: 4rem 0;
-  text-align: center;
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--ifm-color-home-background);
+  padding-left: 1rem;
+  padding-right: 1rem;
   position: relative;
-  overflow: hidden;
+  z-index: 0;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 2rem;
-  }
+/* Hero Section */
+.heroImage {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 560px;
+  background-repeat: no-repeat;
+  background: url('/static/img/hero.jpg');
+  background-size: cover;
+}
+[data-theme='dark'] .heroImage {
+  display: none;
+}
+.heroTitle {
+  margin-top: 3.5rem !important;
 }
 
-.buttons {
+/* Utilities */
+.displayForExtraSmall {
+  display: block;
+}
+.hideForExtraSmall {
+  display: block;
+}
+.displayFromSmall {
+  display: none !important;
+}
+.displayFromExtraSmall {
+  display: none;
+}
+.arrow {
+  color: var(--ifm-color-home-text-primary);
+}
+
+/* Hero Button Section */
+.heroButtonSection {
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 2.5rem;
+  margin-top: 2.5rem;
+}
+
+/* Article Section */
+.articlesSection {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 100%;
+  width: 100%;
+  margin-top: 6rem;
+  margin-bottom: 5rem;
+  max-width: 1024px;
+}
+.articlesSection2 {
+  margin-top: 0;
+}
+
+/* Article Stack Section */
+.articleStackSection {
+  display: grid;
+  gap: 1px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  max-width: 1024px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #eeeeee;
+  border: 1px solid #eeeeee;
+}
+[data-theme='dark'] .articleStackSection {
+  background: var(--ifm-color-home-elevation-04);
+  border: none;
+}
+
+/* Statistics Section */
+.statisticsSection {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 5rem;
+  max-width: 1024px;
+}
+
+/* Community Section */
+.communityCardSection {
+  display: grid;
+  gap: 1.25rem;
+  grid-template-columns: 100%;
+  width: 100%;
+  margin-top: 2rem;
+  margin-bottom: 7rem;
+  max-width: 1024px;
+}
+
+@media (min-width: 376px) {
+  .root {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .title {
+    font-size: 64px;
+    line-height: 72px;
+  }
+
+  .hideForExtraSmall {
+    display: none;
+  }
+  .displayFromExtraSmall {
+    display: inline-block;
+  }
+}
+
+@media (min-width: 600px) {
+  .root {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* Utilities Section */
+  .displayForExtraSmall {
+    display: none;
+  }
+  .hideForExtraSmall {
+    display: block;
+  }
+  .displayFromSmall {
+    display: block;
+  }
+
+  /* Article Section */
+  .articlesSection {
+    display: grid !important;
+    gap: 21px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Article Stack Section */
+  .articleStackSection {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  /* Statistics Section */
+  .statisticsSection {
+    gap: 21px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  /* Community Section */
+  .communityCardSection {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+  .communityCardSection > div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  .communityCardSection > div:nth-child(2) {
+    grid-column-start: 6;
+    grid-column-end: 9;
+  }
+  .communityCardSection > div:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 4;
+  }
+  .communityCardSection > div:nth-child(4) {
+    grid-column-start: 4;
+    grid-column-end: 9;
+  }
+}
+
+@media (min-width: 905px) {
+  /* Community Section */
+  .communityCardSection {
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+  }
+  .communityCardSection > div:first-child {
+    grid-column-start: 1;
+    grid-column-end: 8;
+  }
+  .communityCardSection > div:nth-child(2) {
+    grid-column-start: 8;
+    grid-column-end: 13;
+  }
+  .communityCardSection > div:nth-child(3) {
+    grid-column-start: 1;
+    grid-column-end: 6;
+  }
+  .communityCardSection > div:nth-child(4) {
+    grid-column-start: 6;
+    grid-column-end: 13;
+  }
 }

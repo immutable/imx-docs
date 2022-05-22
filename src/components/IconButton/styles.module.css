@@ -1,0 +1,43 @@
+.defaultIconButton {
+  color: var(--ifm-color-home-text-primary);
+  height: 48px;
+  width: 48px;
+  border-width: 2px;
+  border-color: var(--ifm-color-home-text-primary);
+  border-radius: 48px;
+  padding: 0;
+  background: transparent;
+  cursor: pointer;
+}
+.defaultIconButton:hover {
+  border-width: 3px;
+}
+.defaultIconButton:active {
+  border-width: 4px;
+}
+
+.solidIconButton {
+  color: var(--ifm-color-home-text-primary);
+  height: 48px;
+  width: 48px;
+  border-radius: 48px;
+  border-width: 0;
+  padding: 0;
+  background: var(--ifm-color-home-elevation-01);
+  transition: background 300ms ease-out;
+  cursor: pointer;
+}
+.solidIconButton:hover {
+  background: var(--ifm-color-home-elevation-02);
+}
+.solidIconButton:active {
+  background: var(--ifm-color-home-elevation-02);
+}
+
+[data-theme='dark'] .solidIconButton {
+  background: var(--ifm-color-home-elevation-03);
+}
+[data-theme='dark'] .solidIconButton:hover,
+.solidIconButton:active {
+  background: var(--ifm-color-home-elevation-04);
+}

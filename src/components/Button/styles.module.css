@@ -1,0 +1,51 @@
+.defaultButton {
+  composes: text-body-01-emphasis from '../../css/custom.css';
+  width: fit-content;
+  color: var(--ifm-color-home-text-primary);
+  height: 48px;
+  padding-left: 28px;
+  padding-right: 28px;
+  border-width: 2px;
+  border-color: var(--ifm-color-home-text-primary);
+  border-radius: 48px;
+  background: transparent;
+  cursor: pointer;
+}
+.defaultButton:hover {
+  border-width: 3px;
+  padding-left: 27px;
+  padding-right: 27px;
+}
+.defaultButton:active {
+  border-width: 4px;
+  padding-left: 26px;
+  padding-right: 26px;
+}
+
+.solidButton {
+  composes: text-body-01-emphasis from '../../css/custom.css';
+  width: fit-content;
+  color: var(--ifm-color-home-text-primary);
+  height: 48px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 8px;
+  border-width: 0;
+  background: var(--ifm-color-home-elevation-01);
+  transition: background 300ms ease-out;
+  cursor: pointer;
+}
+.solidButton:hover {
+  background: var(--ifm-color-home-elevation-02);
+}
+.solidButton:active {
+  background: var(--ifm-color-home-elevation-02);
+}
+
+[data-theme='dark'] .solidButton {
+  background: var(--ifm-color-home-elevation-03);
+}
+[data-theme='dark'] .solidButton:hover,
+.solidButton:active {
+  background: var(--ifm-color-home-elevation-04);
+}
