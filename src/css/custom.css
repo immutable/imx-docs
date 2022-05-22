@@ -1,30 +1,52 @@
-/**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
- */
-
-/* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #049BB1;
+  /* Breakpoints */
+  --viewportExtraSmallMin: 375px;
+  --viewportExtraSmallMax: 599px;
+  --viewportSmallMin: 600px;
+  --viewportSmallMax: 904px;
+  --viewportMediumMin: 905px;
+  --viewportMediumMax: 1239px;
+  --viewportLargeMin: 1240px;
+  --viewportLargeMax: 1440px;
+
+  /* Colors */
+  --ifm-color-primary: #049bb1;
   --ifm-color-primary-dark: #036f7f;
   --ifm-color-primary-darker: #02444d;
   --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #24D1E9;
+  --ifm-color-primary-light: #24d1e9;
   --ifm-color-primary-lighter: #34d1e6;
   --ifm-color-primary-lightest: #80d1db;
   --ifm-code-font-size: 95%;
+
+  /* Homepage Colors */
+  --ifm-color-home-background: #ffffff;
+  --ifm-color-home-text-primary: #131313;
+  --ifm-color-home-elevation-00: #ffffff;
+  --ifm-color-home-elevation-01: #f3f3f3;
+  --ifm-color-home-elevation-02: #e7e7e7;
+  --ifm-color-home-elevation-03: #dddddd;
+  --ifm-color-home-elevation-04: #d3d3d3;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #24D1E9;
+  --ifm-color-primary: #24d1e9;
   --ifm-color-primary-dark: #20b8cc;
   --ifm-color-primary-darker: #1b9cad;
   --ifm-color-primary-darkest: #208896;
-  --ifm-color-primary-light: #049BB1;
+  --ifm-color-primary-light: #049bb1;
   --ifm-color-primary-lighter: #219caf;
   --ifm-color-primary-lightest: #4099a7;
+
+  /* Homepage Colors */
+  --ifm-color-home-background: #2b2b2b;
+  --ifm-color-home-text-primary: #eeeeee;
+  --ifm-color-home-elevation-00: #131313;
+  --ifm-color-home-elevation-01: #2b2b2b;
+  --ifm-color-home-elevation-02: #404040;
+  --ifm-color-home-elevation-03: #535353;
+  --ifm-color-home-elevation-04: #5c5c5c;
 }
 
 .docusaurus-highlight-code-line {
@@ -36,4 +58,190 @@
 
 [data-theme='dark'] .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+.grad {
+  background: unset;
+  color: #131313;
+}
+[data-theme='dark'] .grad {
+  background: linear-gradient(90.68deg, #f191fa 0%, #83e3f0 99.82%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.card-light-04 {
+  background: #c4c4c4;
+  box-shadow: 0px 4px 30px rgba(19, 19, 19, 0.16);
+}
+
+/* Hero Typography */
+.text-hero {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 124px;
+}
+.text-hero-emphasis {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 96px;
+  line-height: 112px;
+}
+
+/* Heading Typography */
+.text-heading-title {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 72px;
+}
+.text-heading-01 {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+}
+.text-heading-02 {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 32px;
+}
+.text-heading-03 {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+}
+.text-heading-04 {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Body Typography */
+.text-body-01 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+}
+.text-body-01-emphasis {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+}
+.text-body-02 {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+}
+.text-body-02-emphasis {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+}
+.text-body-03 {
+  font-family: 'Favorit Std';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+.text-body-03-emphasis {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+}
+
+/* Custom classes */
+.hyperlink:hover {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.hyperlink:active {
+  text-decoration: underline solid 2px;
+}
+
+/* Navbar Section */
+nav.navbar {
+  height: 88px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+div.navbar__inner {
+  max-width: 1360px;
+  margin: auto;
+}
+a.navbar__brand {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 0;
+}
+.navbar__logo,
+.navbar__logo img {
+  height: unset;
+  z-index: 0;
+}
+@media (min-width: 376px) {
+  nav.navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+@media (min-width: 600px) {
+  nav.navbar {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+@media (min-width: 905px) {
+  nav.navbar {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
+a.navbar__item.navbar__link {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: var(--ifm-color-home-text-primary);
+  margin-right: 32px;
+  padding: 0;
+}
+
+.DocSearch-Button-Keys,
+.DocSearch-Button-Placeholder {
+  display: none !important;
+}
+button.DocSearch.DocSearch-Button {
+  height: 48px;
+  width: 48px;
+  justify-content: center;
+  background: var(--ifm-color-home-elevation-01);
+}
+[data-theme='dark'] button.DocSearch.DocSearch-Button {
+  background: var(--ifm-color-home-elevation-03);
 }
