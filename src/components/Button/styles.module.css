@@ -8,6 +8,7 @@
   border-width: 2px;
   border-color: var(--ifm-color-home-text-primary);
   border-radius: 48px;
+  border-style: solid;
   background: transparent;
   cursor: pointer;
 }

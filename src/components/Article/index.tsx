@@ -5,13 +5,14 @@ import { useColorMode } from '@docusaurus/theme-common'
 import clsx from 'clsx'
 
 interface ArticleProps {
-  image: string
+  LightIcon?: ({ className }: { className?: string }) => JSX.Element
+  DarkIcon?: ({ className }: { className?: string }) => JSX.Element
   title: string | ReactNode
-  subtitle: string
+  subtitle: string | ReactNode
   cta: string[]
 }
 
-const Article = ({ image, title, subtitle, cta }: ArticleProps) => {
+const Article = ({ title, subtitle, cta, LightIcon, DarkIcon }: ArticleProps) => {
   const theme = useColorMode()
 
   return (
@@ -22,11 +23,10 @@ const Article = ({ image, title, subtitle, cta }: ArticleProps) => {
       )}
     >
       <div className={styles.contentSection}>
-        <img
-          className={styles.image}
-          src={require(`/static/img/pictograms/${image}-${theme.colorMode}.jpg`).default}
-          alt="image"
-        />
+        {LightIcon && theme.colorMode === 'light' && (
+          <LightIcon className={styles.image} />
+        )}
+        {DarkIcon && theme.colorMode === 'dark' && <DarkIcon className={styles.image} />}
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>

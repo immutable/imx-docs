@@ -8,9 +8,16 @@ interface ArticleStackProps {
   DarkIcon?: ({ className }: { className?: string }) => JSX.Element
   title: string | ReactNode
   subtitle: string
+  buttonText?: string
 }
 
-const ArticleStack = ({ LightIcon, DarkIcon, title, subtitle }: ArticleStackProps) => {
+const ArticleStack = ({
+  LightIcon,
+  DarkIcon,
+  title,
+  subtitle,
+  buttonText = 'Learn More',
+}: ArticleStackProps) => {
   const theme = useColorMode()
 
   return (
@@ -19,12 +26,12 @@ const ArticleStack = ({ LightIcon, DarkIcon, title, subtitle }: ArticleStackProp
         {LightIcon && theme.colorMode === 'light' && (
           <LightIcon className={styles.image} />
         )}
-        {DarkIcon && theme.colorMode === 'dark' && <DarkIcon />}
+        {DarkIcon && theme.colorMode === 'dark' && <DarkIcon className={styles.image} />}
         <h3 className={styles.title}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <Button variant="solid" onClick={() => console.log('Learn more clicked')}>
-        Learn More
+        {buttonText}
       </Button>
     </div>
   )

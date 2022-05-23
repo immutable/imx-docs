@@ -8,6 +8,8 @@
   padding: 0;
   background: transparent;
   cursor: pointer;
+  border-style: solid;
+  font-size: 0;
 }
 .defaultIconButton:hover {
   border-width: 3px;
@@ -23,6 +25,7 @@
   border-radius: 48px;
   border-width: 0;
   padding: 0;
+  font-size: 0;
   background: var(--ifm-color-home-elevation-01);
   transition: background 300ms ease-out;
   cursor: pointer;

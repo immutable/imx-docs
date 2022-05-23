@@ -19,14 +19,12 @@ const StatisticsCard = ({
   return (
     <div
       className={styles.cardContainer}
-      style={
-        {
-          // background: 'red',
-          // background: `linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5))`,
-          // backgroundImage: `url(${image})`,
-          // background: require('/static/img/vyWorlds.jpg').default,
-        }
-      }
+      style={{
+        // background: `linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)), ${
+        //   require('/static/img/vyWorlds.png').default
+        // }`,
+        backgroundSize: 'cover',
+      }}
     >
       <div>
         <h1 className={styles.statisticsNumber}>{statisticsNumber}</h1>

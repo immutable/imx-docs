@@ -26,7 +26,7 @@ const CommunityCard = ({
       )}
     >
       <div className={styles.contentSection}>
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={clsx('grad', styles.title)}>{title}</h3>
         <p className={styles.subtitle}>{subtitle}</p>
       </div>
       <Button className={styles.cardButton} onClick={() => console.log('Button clicked')}>

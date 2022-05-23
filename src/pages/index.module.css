@@ -8,6 +8,9 @@
   position: relative;
   z-index: 0;
 }
+[data-theme='dark'] .root {
+  background: url('/static/img/darkTile.png');
+}
 
 /* Hero Section */
 .heroImage {

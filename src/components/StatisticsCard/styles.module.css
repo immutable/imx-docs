@@ -8,14 +8,15 @@
   height: 320px;
   background-size: cover;
   background-repeat: no-repeat;
-  opacity: 0.5;
 }
 
 .cardContainer:first-child {
-  background-image: url(/static/img/vyWorlds.jpg);
+  background: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
+    url(/static/img/vyWorlds.png);
 }
 .cardContainer:nth-child(2) {
-  background-image: url(/static/img/illuvium.jpg);
+  background: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
+    url(/static/img/illuvium.png);
 }
 
 .statisticsNumber {

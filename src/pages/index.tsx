@@ -1,8 +1,6 @@
 import clsx from 'clsx'
 import React from 'react'
 import Layout from '@theme/Layout'
-import Link from '@docusaurus/Link'
-import useDocusaurusContext from '@docusaurus/useDocusaurusContext'
 
 import styles from './index.module.css'
 import Title from '../components/Title'
@@ -12,8 +10,8 @@ import Article from '../components/Article'
 import IconButton from '../components/IconButton'
 import GlobalHeader from '../components/GlobalHeader'
 import ArticleStack from '../components/ArticleStack'
-import StatisticsCard from '../components/StatisticsCard'
 import CommunityCard from '../components/CommunityCard'
+import StatisticsCard from '../components/StatisticsCard'
 
 import SdkDarkIcon from '@site/static/icons/SdkDark'
 import SdkLightIcon from '@site/static/icons/SdkLight'
@@ -26,13 +24,26 @@ import DappsLightIcon from '@site/static/icons/DappsLight'
 import RightArrowIcon from '@site/static/icons/RightArrow'
 import ContractDarkIcon from '@site/static/icons/ContractDark'
 import ExplorerDarkIcon from '@site/static/icons/ExplorerDark'
+import NftDarkIcon from '@site/static/icons/pictograms/NftDark'
 import ContractLightIcon from '@site/static/icons/ContractLight'
 import ExplorerLightIcon from '@site/static/icons/ExplorerLight'
+import NftLightIcon from '@site/static/icons/pictograms/NftLight'
+import UtilityDarkIcon from '@site/static/icons/pictograms/UtilityDark'
+import UtilityLightIcon from '@site/static/icons/pictograms/UtilityLight'
+import BugBountyDarkIcon from '@site/static/icons/pictograms/BugBountyDark'
+import BugBountyLightIcon from '@site/static/icons/pictograms/BugBountyLight'
+import DevelopersDarkIcon from '@site/static/icons/pictograms/DevelopersDark'
+import DevelopersLightIcon from '@site/static/icons/pictograms/DevelopersLight'
+import MarketplaceDarkIcon from '@site/static/icons/pictograms/MarketplaceDark'
+import MarketplaceLightIcon from '@site/static/icons/pictograms/MarketplaceLight'
+import ContributorsDarkIcon from '@site/static/icons/pictograms/ContributorsDark'
+import ContributorsLightIcon from '@site/static/icons/pictograms/ContributorsLight'
 
 const Homepage = () => {
   const articleSectionData = [
     {
-      image: 'nft',
+      LightIcon: NftLightIcon,
+      DarkIcon: NftDarkIcon,
       title: (
         <>
           Launch an
@@ -43,7 +54,8 @@ const Homepage = () => {
       cta: ['IP Collectible projects', 'Web3 NFT games'],
     },
     {
-      image: 'marketplace',
+      LightIcon: MarketplaceLightIcon,
+      DarkIcon: MarketplaceDarkIcon,
       title: (
         <>
           Build a
@@ -54,7 +66,8 @@ const Homepage = () => {
       cta: ['Create a new marketplace', 'Integrating IMX'],
     },
     {
-      image: 'utility',
+      LightIcon: UtilityLightIcon,
+      DarkIcon: UtilityDarkIcon,
       title: (
         <>
           Build
@@ -62,7 +75,7 @@ const Homepage = () => {
         </>
       ),
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      cta: ['See solutions'],
+      cta: ['IP Collectible projects', 'Web3 NFT games'],
     },
   ]
 
@@ -78,57 +91,76 @@ const Homepage = () => {
       DarkIcon: SaleDarkIcon,
       title: 'Primary sale',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      buttonText: 'Open Docs',
     },
     {
       LightIcon: ContractLightIcon,
       DarkIcon: ContractDarkIcon,
       title: 'Contracts',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      buttonText: 'Open Docs',
     },
     {
       LightIcon: GoSdkLightIcon,
       DarkIcon: GoSdkDarkIcon,
       title: 'IMX Go SDK',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      buttonText: 'Open Docs',
     },
     {
       LightIcon: DappsLightIcon,
       DarkIcon: DappsDarkIcon,
       title: 'DAPPs',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      buttonText: 'Open Docs',
     },
     {
       LightIcon: ExplorerLightIcon,
       DarkIcon: ExplorerDarkIcon,
       title: 'Explorer',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      buttonText: 'Open Docs',
     },
   ]
 
   const articleSection2Data = [
     {
-      image: 'developers',
+      LightIcon: DevelopersLightIcon,
+      DarkIcon: DevelopersDarkIcon,
       title: 'Developer grants',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      cta: ['Learn more'],
+      subtitle: (
+        <>
+          Early BUIDL grants, marketing support,
+          <br /> technical guidance and much more.
+        </>
+      ),
+      cta: ['Know more'],
     },
     {
-      image: 'bug-bounty',
+      LightIcon: BugBountyLightIcon,
+      DarkIcon: BugBountyDarkIcon,
       title: 'Bug bounty',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      cta: ['Learn more'],
+      subtitle: (
+        <>
+          Find out our vulnerabilities
+          <br /> and win a bounty.
+        </>
+      ),
+      cta: ['Know more'],
     },
     {
-      image: 'contributors',
+      LightIcon: ContributorsLightIcon,
+      DarkIcon: ContributorsDarkIcon,
       title: 'Help contribute',
-      subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+      subtitle:
+        'Help us close the gaps in knowledge by contributing to ImmutableX developer documentaion.',
       cta: ['Contributer guidelines'],
     },
   ]
 
   const statisticsSectionData = [
     {
-      image: '/static/img/vyWorlds.jpg',
+      image: '/static/img/vyWorlds.png',
       statisticsNumber: '18m',
       statisticsLabel: 'Gas saved',
       subtitle: 'VY Worlds',
@@ -136,7 +168,7 @@ const Homepage = () => {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus.',
     },
     {
-      image: '/static/img/illuvium.jpg',
+      image: '/static/img/illuvium.png',
       statisticsNumber: '20m',
       statisticsLabel: 'NFTs TRADED',
       subtitle: 'Illuvium',
@@ -153,9 +185,9 @@ const Homepage = () => {
       isLongCard: true,
     },
     {
-      title: 'Contribute & earn',
+      title: 'Discord',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Contribute',
+      buttonText: 'Join',
       isLongCard: false,
     },
     {
@@ -165,9 +197,9 @@ const Homepage = () => {
       isLongCard: false,
     },
     {
-      title: 'Discord',
+      title: 'Contribute & earn',
       subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-      buttonText: 'Join',
+      buttonText: 'Contribute',
       isLongCard: true,
     },
   ]
@@ -211,7 +243,12 @@ const Homepage = () => {
 
           <Title
             title="IMX tools"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus."
+            subtitle={
+              <>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                <br /> ultrices fringilla pharetra nullam placerat tellus."
+              </>
+            }
           />
           <div className={styles.articleStackSection}>
             {articleStackSectionData.map((article, index) => (
@@ -233,7 +270,12 @@ const Homepage = () => {
 
           <Title
             title="Built with IMX"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus."
+            subtitle={
+              <>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                <br /> ultrices fringilla pharetra nullam placerat tellus."
+              </>
+            }
           />
           <div className={styles.statisticsSection}>
             {statisticsSectionData.map((statisticsInfo, index) => (
@@ -243,7 +285,12 @@ const Homepage = () => {
 
           <Title
             title="Join the community"
-            subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus ultrices fringilla pharetra nullam placerat tellus."
+            subtitle={
+              <>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                <br /> ultrices fringilla pharetra nullam placerat tellus."
+              </>
+            }
           />
           <div className={styles.communityCardSection}>
             {communitySectionData.map((communityInfo, index) => (

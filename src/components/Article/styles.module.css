@@ -9,7 +9,7 @@
   background: var(--ifm-color-home-elevation-00);
 }
 [data-theme='dark'] .articleContainer {
-  background: var(--ifm-color-home-elevation-02);
+  background: var(--ifm-color-home-elevation-03);
 }
 
 @media (min-width: 376px) {
@@ -68,13 +68,12 @@
   justify-content: flex-start;
   gap: 4px;
   width: 100%;
-  background: var(--ifm-color-home-elevation-00);
+  background: transparent;
   border-top: 1px solid #eeeeee;
   cursor: pointer;
 }
 [data-theme='dark'] .ctaContainer {
-  background: var(--ifm-color-home-elevation-02);
-  border-top: 1px solid var(--ifm-color-home-elevation-03);
+  border-top: 1px solid var(--ifm-color-home-elevation-04);
 }
 
 .ctaTitle {

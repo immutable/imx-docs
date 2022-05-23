@@ -3,6 +3,7 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
+const { default: React } = require('react')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -41,16 +42,10 @@ const config = {
       navbar: {
         logo: {
           alt: 'Immutable Logo',
-          src: 'img/logo-light.jpg',
-          srcDark: 'img/logo-dark.jpg',
+          src: 'img/logoLight.svg',
+          srcDark: 'img/logoDark.svg',
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'overview/welcome',
-            position: 'left',
-            label: 'Home',
-          },
           {
             type: 'doc',
             docId: 'overview/welcome',
@@ -58,10 +53,40 @@ const config = {
             label: 'Docs',
           },
           {
+            type: 'doc',
+            docId: 'overview/welcome',
             position: 'left',
-            label: 'Guides',
+            label: 'APIs',
+          },
+          {
+            position: 'left',
+            label: 'SDKs',
             type: 'doc',
             docId: 'guides/getting-started-guide',
+          },
+          {
+            to: 'https://abc.com',
+            label: 'IMX Whitepaper',
+            position: 'left',
+            className: 'custom_sidebar_menu',
+          },
+          {
+            to: 'https://abc.com',
+            label: 'IMX Tokenomics',
+            position: 'left',
+            className: 'custom_sidebar_menu',
+          },
+          {
+            to: 'https://abc.com',
+            label: 'Immutascan.io',
+            position: 'left',
+            className: 'custom_sidebar_menu',
+          },
+          {
+            to: 'https://abc.com',
+            label: 'Careers at immutable',
+            position: 'left',
+            className: 'custom_sidebar_menu',
           },
         ],
       },
