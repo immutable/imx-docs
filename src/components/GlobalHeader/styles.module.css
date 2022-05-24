@@ -35,11 +35,7 @@
   }
 
   .headerLink {
-    font-family: 'Favorit Std';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 16px;
+    composes: text-body-02 from '../../css/custom.css';
     color: #eeeeee;
   }
   .headerLink:hover,

@@ -1,14 +1,13 @@
 @font-face {
-  font-family: 'Roboto-Medium';
-  src: url('/static/fonts/roboto-medium.woff2') format('woff2'),
-    url('/static/fonts/roboto-medium.woff') format('woff');
+  font-family: 'Roboto';
+  src: url('/static/fonts/roboto-regular.woff2') format('woff2'),
+    url('/static/fonts/roboto-regular.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
-  font-family: 'Roboto';
-  src: url('/static/fonts/roboto-regular.woff2') format('woff2'),
-    url('/static/fonts/roboto-regular.woff') format('woff');
+  font-family: 'Suisse-Intl';
+  src: url('/static/fonts/suisseintl-regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
 }
@@ -100,14 +99,14 @@
 
 /* Hero Typography */
 .text-hero {
-  font-family: 'Roboto';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 400;
   font-size: 96px;
   line-height: 124px;
 }
 .text-hero-emphasis {
-  font-family: 'Favorit Std';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 700;
   font-size: 96px;
@@ -116,35 +115,35 @@
 
 /* Heading Typography */
 .text-heading-title {
-  font-family: 'Favorit Std';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 700;
   font-size: 64px;
   line-height: 72px;
 }
 .text-heading-01 {
-  font-family: 'Favorit Std';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
 }
 .text-heading-02 {
-  font-family: 'Favorit Std';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;
 }
 .text-heading-03 {
-  font-family: 'Favorit Std';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
 }
 .text-heading-04 {
-  font-family: 'Favorit Std';
+  font-family: 'Suisse-Intl';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -181,7 +180,7 @@
   line-height: 20px;
 }
 .text-body-03 {
-  font-family: 'Favorit Std';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 12px;
@@ -217,6 +216,10 @@ div.navbar__inner {
   max-width: 1360px;
   margin: auto;
 }
+/* Menu Items */
+a.navbar__item.navbar__link:nth-child(3) {
+  display: none;
+}
 a.navbar__item.navbar__link {
   font-family: 'Roboto';
   font-style: normal;
@@ -234,11 +237,21 @@ a.navbar__item.navbar__link:hover {
 a.navbar__item.navbar__link:active {
   text-decoration: underline solid 2px;
 }
+/* Navbar Logo */
 .navbar__inner a.navbar__brand {
   position: absolute;
   left: 50%;
   top: 50%;
+  width: 48px;
+  height: 48px;
   transform: translate(-50%, -50%);
+  background: url('/static/img/XLight.svg');
+}
+[data-theme='dark'] .navbar__inner a.navbar__brand {
+  background: url('/static/img/XDark.svg');
+}
+.navbar__inner a.navbar__brand .navbar__logo {
+  display: none;
 }
 @media (min-width: 376px) {
   nav.navbar {
@@ -252,8 +265,17 @@ a.navbar__item.navbar__link:active {
     padding-left: 48px;
     padding-right: 48px;
   }
-  .navbar__logo {
+  .navbar__inner a.navbar__brand {
     height: 3rem;
+    width: 220px;
+    background-repeat: no-repeat;
+    background: url('/static/img/logoLight.svg');
+  }
+  [data-theme='dark'] .navbar__inner a.navbar__brand {
+    height: 3rem;
+    width: 220px;
+    background-repeat: no-repeat;
+    background: url('/static/img/logoDark.svg');
   }
 }
 @media (min-width: 905px) {
@@ -287,7 +309,7 @@ button.DocSearch.DocSearch-Button {
   padding: 0;
   width: 48px;
   height: 48px;
-  margin-left: 8px;
+  margin-left: 20px;
   justify-content: center;
   background-image: url(/static/img/searchLight.svg);
 }
@@ -302,6 +324,7 @@ button.DocSearch.DocSearch-Button {
 .navbar__items.navbar__items--right > div:first-child {
   width: 3rem;
   height: 3rem;
+  display: block !important;
 }
 .navbar__items.navbar__items--right > div:first-child > button.clean-btn svg {
   display: none;
@@ -320,8 +343,9 @@ button.DocSearch.DocSearch-Button {
 .navbar-sidebar__brand > div {
   width: 3rem;
   height: 3rem;
+  display: none !important;
 }
-.navbar-sidebar__brand > div > button.clean-btn svg {
+/* .navbar-sidebar__brand > div > button.clean-btn svg {
   display: none;
 }
 .navbar-sidebar__brand > div > button.clean-btn {
@@ -329,7 +353,7 @@ button.DocSearch.DocSearch-Button {
 }
 [data-theme='dark'] .navbar-sidebar__brand > div > button.clean-btn {
   background-image: url(/static/img/toggleModeDark.svg);
-}
+} */
 
 /* Sidebar close icon */
 button.clean-btn.navbar-sidebar__close {
@@ -349,7 +373,7 @@ button.clean-btn.navbar-sidebar__close > svg {
   background-color: var(--ifm-color-home-elevation-00);
 }
 .navbar-sidebar .menu .menu__link {
-  font-family: 'Favorit Std';
+  font-family: 'Roboto';
   font-style: normal;
   font-weight: 700;
   font-size: 40px;
@@ -364,7 +388,7 @@ button.clean-btn.navbar-sidebar__close > svg {
 .navbar__inner .custom_sidebar_menu {
   display: none;
 }
-.navbar-sidebar .menu .menu__list-item:nth-child(4) {
+.navbar-sidebar .menu .menu__list-item:nth-child(5) {
   margin-top: 150px;
 }
 .custom_sidebar_menu {

@@ -61,24 +61,10 @@
     padding: 3.5rem 4rem 2.875rem 4rem;
   }
   .statisticsNumber {
-    font-family: 'Favorit Std';
+    font-family: 'Suisse-Intl';
     font-style: normal;
     font-weight: 700;
-    font-size: 96px;
-    line-height: 112px;
-  }
-  .subtitle {
-    font-family: 'Favorit Std';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 28px;
-    line-height: 32px;
-  }
-  .description {
-    font-family: 'Roboto';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 64px;
+    line-height: 72px;
   }
 }

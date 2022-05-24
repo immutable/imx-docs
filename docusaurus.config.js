@@ -50,6 +50,12 @@ const config = {
             type: 'doc',
             docId: 'overview/welcome',
             position: 'left',
+            label: 'Home',
+          },
+          {
+            type: 'doc',
+            docId: 'overview/welcome',
+            position: 'left',
             label: 'Docs',
           },
           {
