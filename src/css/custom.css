@@ -240,11 +240,9 @@ a.navbar__item.navbar__link:active {
 /* Navbar Logo */
 .navbar__inner a.navbar__brand {
   position: absolute;
-  left: 50%;
-  top: 50%;
   width: 48px;
   height: 48px;
-  transform: translate(-50%, -50%);
+  margin: 0;
   background: url('/static/img/XLight.svg');
 }
 [data-theme='dark'] .navbar__inner a.navbar__brand {
@@ -284,6 +282,13 @@ a.navbar__item.navbar__link:active {
     padding-right: 40px;
   }
 }
+@media (min-width: 996px) {
+  .navbar__inner a.navbar__brand {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 /* Header icons */
 /* Hamburger Icon */
@@ -293,10 +298,28 @@ button.navbar__toggle.clean-btn > svg {
 button.navbar__toggle.clean-btn {
   width: 48px;
   height: 48px;
+  margin: 0;
+  position: absolute;
+  right: 1rem;
   background-image: url(/static/img/hamburgerLight.svg);
 }
 [data-theme='dark'] button.navbar__toggle.clean-btn {
   background-image: url(/static/img/hamburgerDark.svg);
+}
+@media (min-width: 376px) {
+  button.navbar__toggle.clean-btn {
+    right: 40px;
+  }
+}
+@media (min-width: 600px) {
+  button.navbar__toggle.clean-btn {
+    right: 48px;
+  }
+}
+@media (min-width: 905px) {
+  button.navbar__toggle.clean-btn {
+    right: 40px;
+  }
 }
 
 /* Search Icon */
@@ -310,6 +333,7 @@ button.DocSearch.DocSearch-Button {
   width: 48px;
   height: 48px;
   margin-left: 20px;
+  margin-right: 68px;
   justify-content: center;
   background-image: url(/static/img/searchLight.svg);
 }
@@ -318,6 +342,12 @@ button.DocSearch.DocSearch-Button {
 }
 .navbar__inner .navbar__items.navbar__items--right > div:nth-child(2) {
   position: static;
+  padding: 0;
+}
+@media (min-width: 996px) {
+  button.DocSearch.DocSearch-Button {
+    margin-right: 0;
+  }
 }
 
 /* Toggle color mode icon */
@@ -345,15 +375,6 @@ button.DocSearch.DocSearch-Button {
   height: 3rem;
   display: none !important;
 }
-/* .navbar-sidebar__brand > div > button.clean-btn svg {
-  display: none;
-}
-.navbar-sidebar__brand > div > button.clean-btn {
-  background-image: url(/static/img/toggleModeLight.svg);
-}
-[data-theme='dark'] .navbar-sidebar__brand > div > button.clean-btn {
-  background-image: url(/static/img/toggleModeDark.svg);
-} */
 
 /* Sidebar close icon */
 button.clean-btn.navbar-sidebar__close {
@@ -371,6 +392,20 @@ button.clean-btn.navbar-sidebar__close > svg {
 /* Sidebar UI */
 .navbar-sidebar {
   background-color: var(--ifm-color-home-elevation-00);
+  width: 100%;
+  transition: opacity ease-in-out;
+  transition-duration: 280ms;
+}
+.homepage .navbar-sidebar__item.menu:first-child {
+  width: 100%;
+  overflow: hidden;
+}
+.homepage .navbar-sidebar__item.menu:nth-child(2) {
+  display: none;
+}
+.navbar-sidebar__item.menu {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 .navbar-sidebar .menu .menu__link {
   font-family: 'Roboto';
@@ -380,6 +415,8 @@ button.clean-btn.navbar-sidebar__close > svg {
   line-height: 48px;
   color: var(--ifm-color-home-text-primary);
   padding-bottom: 12px;
+  padding-left: 0;
+  padding-right: 0;
 }
 .navbar-sidebar__brand {
   height: 64px;
@@ -389,21 +426,44 @@ button.clean-btn.navbar-sidebar__close > svg {
   display: none;
 }
 .navbar-sidebar .menu .menu__list-item:nth-child(5) {
-  margin-top: 150px;
+  margin-top: 100px;
 }
 .custom_sidebar_menu {
   font-family: 'Roboto' !important;
   font-weight: 400 !important;
   font-size: 16px !important;
   line-height: 24px !important;
-  padding-bottom: 14px !important;
+  padding-bottom: 6px !important;
+  margin-bottom: 8px !important;
 }
 [data-theme='dark'] .custom_sidebar_menu {
   color: #c1c1c1 !important;
 }
+@media (min-width: 376px) {
+  .navbar-sidebar__brand,
+  .navbar-sidebar__item.menu {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+}
 @media (min-width: 600px) {
   .navbar-sidebar__brand {
-    color: #c1c1c1;
     height: 88px;
+  }
+  .navbar-sidebar__brand,
+  .navbar-sidebar__item.menu {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+  .navbar-sidebar__brand .navbar__logo {
+    height: 3rem;
+    width: 220px;
+  }
+}
+@media (min-width: 905px) {
+  .navbar-sidebar__brand,
+  .navbar-sidebar__item.menu {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }

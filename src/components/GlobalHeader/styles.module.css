@@ -2,7 +2,7 @@
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 996px) {
   .headerSection {
     display: block;
     background: #131313;
