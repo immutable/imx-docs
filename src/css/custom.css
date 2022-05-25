@@ -13,16 +13,6 @@
 }
 
 :root {
-  /* Breakpoints */
-  --viewportExtraSmallMin: 375px;
-  --viewportExtraSmallMax: 599px;
-  --viewportSmallMin: 600px;
-  --viewportSmallMax: 904px;
-  --viewportMediumMin: 905px;
-  --viewportMediumMax: 1239px;
-  --viewportLargeMin: 1240px;
-  --viewportLargeMax: 1440px;
-
   /* Colors */
   --ifm-color-primary: #049bb1;
   --ifm-color-primary-dark: #036f7f;
@@ -213,7 +203,7 @@ nav.navbar {
   background: url('/static/img/darkTile.png');
 }
 div.navbar__inner {
-  max-width: 1360px;
+  max-width: 1344px;
   margin: auto;
 }
 /* Menu Items */
@@ -251,13 +241,13 @@ a.navbar__item.navbar__link:active {
 .navbar__inner a.navbar__brand .navbar__logo {
   display: none;
 }
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   nav.navbar {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   nav.navbar {
     height: 88px;
     padding-left: 48px;
@@ -274,12 +264,6 @@ a.navbar__item.navbar__link:active {
     width: 220px;
     background-repeat: no-repeat;
     background: url('/static/img/logoDark.svg');
-  }
-}
-@media (min-width: 905px) {
-  nav.navbar {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 }
 @media (min-width: 996px) {
@@ -306,19 +290,14 @@ button.navbar__toggle.clean-btn {
 [data-theme='dark'] button.navbar__toggle.clean-btn {
   background-image: url(/static/img/hamburgerDark.svg);
 }
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   button.navbar__toggle.clean-btn {
     right: 40px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   button.navbar__toggle.clean-btn {
     right: 48px;
-  }
-}
-@media (min-width: 905px) {
-  button.navbar__toggle.clean-btn {
-    right: 40px;
   }
 }
 
@@ -371,8 +350,6 @@ button.DocSearch.DocSearch-Button {
 
 /* Sidebar Toggle color mode icon */
 .navbar-sidebar__brand > div {
-  width: 3rem;
-  height: 3rem;
   display: none !important;
 }
 
@@ -439,14 +416,14 @@ button.clean-btn.navbar-sidebar__close > svg {
 [data-theme='dark'] .custom_sidebar_menu {
   color: #c1c1c1 !important;
 }
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   .navbar-sidebar__brand,
   .navbar-sidebar__item.menu {
     padding-left: 40px;
     padding-right: 40px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .navbar-sidebar__brand {
     height: 88px;
   }
@@ -458,12 +435,5 @@ button.clean-btn.navbar-sidebar__close > svg {
   .navbar-sidebar__brand .navbar__logo {
     height: 3rem;
     width: 220px;
-  }
-}
-@media (min-width: 905px) {
-  .navbar-sidebar__brand,
-  .navbar-sidebar__item.menu {
-    padding-left: 40px;
-    padding-right: 40px;
   }
 }

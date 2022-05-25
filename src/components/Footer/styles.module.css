@@ -38,18 +38,15 @@
   gap: 0.5rem;
 }
 
-@media (min-width: 600px) {
-  .footerIcon {
-    width: 48px;
-    height: 48px;
-  }
-}
-
 .displayFromSmall {
   display: none;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 640px) {
+  .footerIcon {
+    width: 48px;
+    height: 48px;
+  }
   .displayFromSmall {
     display: block;
   }

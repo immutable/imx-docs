@@ -49,13 +49,13 @@
   margin-top: 0.5rem;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   .cardContainer {
     padding: 3.75rem 5rem;
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .cardContainer {
     height: 520px;
     padding: 3.5rem 4rem 2.875rem 4rem;

@@ -12,12 +12,12 @@
   background: var(--ifm-color-home-elevation-03);
 }
 
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   .articleContainer {
     height: 320px;
   }
 }
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .articleContainer {
     height: 384px;
   }

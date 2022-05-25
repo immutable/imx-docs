@@ -13,7 +13,7 @@
   border: none;
   background: var(--ifm-color-home-elevation-02);
 }
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .communityCardContainer {
     height: 260px;
   }
@@ -62,7 +62,7 @@
 .cardButton {
   width: 160px;
 }
-@media (min-width: 600px) {
+@media (min-width: 640px) {
   .cardButton {
     width: fit-content;
   }

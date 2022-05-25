@@ -110,7 +110,7 @@
   max-width: 1024px;
 }
 
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   .root {
     padding-left: 40px;
     padding-right: 40px;
@@ -129,7 +129,7 @@
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 768px) {
   .root {
     padding-left: 3rem;
     padding-right: 3rem;
@@ -186,7 +186,7 @@
   }
 }
 
-@media (min-width: 905px) {
+@media (min-width: 1024px) {
   /* Community Section */
   .communityCardSection {
     grid-template-columns: repeat(12, minmax(0, 1fr));

@@ -11,7 +11,7 @@
   background: var(--ifm-color-home-elevation-02);
 }
 
-@media (min-width: 376px) {
+@media (min-width: 640px) {
   .articleStackContainer {
     height: 280px;
   }
