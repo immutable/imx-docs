@@ -11,6 +11,12 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Suisse-Intl-Bold';
+  src: url('/static/fonts/suisseintl-bold.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   /* Colors */
@@ -90,8 +96,6 @@
 /* Hero Typography */
 .text-hero {
   font-family: 'Suisse-Intl';
-  font-style: normal;
-  font-weight: 400;
   font-size: 96px;
   line-height: 124px;
 }
@@ -105,35 +109,34 @@
 
 /* Heading Typography */
 .text-heading-title {
-  font-family: 'Suisse-Intl';
-  font-style: normal;
-  font-weight: 700;
+  font-family: 'Suisse-Intl-Bold';
+  font-weight: 600;
   font-size: 64px;
   line-height: 72px;
 }
 .text-heading-01 {
-  font-family: 'Suisse-Intl';
-  font-style: normal;
+  font-family: 'Suisse-Intl-Bold';
+  font-style: bold;
   font-weight: 700;
   font-size: 40px;
   line-height: 48px;
 }
 .text-heading-02 {
-  font-family: 'Suisse-Intl';
+  font-family: 'Suisse-Intl-Bold';
   font-style: normal;
   font-weight: 700;
   font-size: 28px;
   line-height: 32px;
 }
 .text-heading-03 {
-  font-family: 'Suisse-Intl';
+  font-family: 'Suisse-Intl-Bold';
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
 }
 .text-heading-04 {
-  font-family: 'Suisse-Intl';
+  font-family: 'Suisse-Intl-Bold';
   font-style: normal;
   font-weight: 700;
   font-size: 16px;
@@ -172,7 +175,7 @@
 .text-body-03 {
   font-family: 'Roboto';
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 12px;
   line-height: 16px;
 }
@@ -198,6 +201,7 @@ nav.navbar {
   height: 64px;
   padding-left: 1rem;
   padding-right: 1rem;
+  box-shadow: none;
 }
 [data-theme='dark'] nav.navbar {
   background: url('/static/img/darkTile.png');
@@ -207,7 +211,7 @@ div.navbar__inner {
   margin: auto;
 }
 /* Menu Items */
-a.navbar__item.navbar__link:nth-child(3) {
+.homepage a.navbar__item.navbar__link:nth-child(3) {
   display: none;
 }
 a.navbar__item.navbar__link {
@@ -266,7 +270,7 @@ a.navbar__item.navbar__link:active {
     background: url('/static/img/logoDark.svg');
   }
 }
-@media (min-width: 996px) {
+@media (min-width: 997px) {
   .navbar__inner a.navbar__brand {
     top: 50%;
     left: 50%;
@@ -286,9 +290,23 @@ button.navbar__toggle.clean-btn {
   position: absolute;
   right: 1rem;
   background-image: url(/static/img/hamburgerLight.svg);
+  border-radius: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 300ms ease-in-out;
+  background-color: var(--ifm-color-home-elevation-01);
+}
+button.navbar__toggle.clean-btn:hover,
+button.navbar__toggle.clean-btn:active {
+  background-color: var(--ifm-color-home-elevation-02);
 }
 [data-theme='dark'] button.navbar__toggle.clean-btn {
   background-image: url(/static/img/hamburgerDark.svg);
+  background-color: var(--ifm-color-home-elevation-03);
+}
+[data-theme='dark'] button.navbar__toggle.clean-btn:hover,
+[data-theme='dark'] button.navbar__toggle.clean-btn:active {
+  background-color: var(--ifm-color-home-elevation-04);
 }
 @media (min-width: 640px) {
   button.navbar__toggle.clean-btn {
@@ -315,15 +333,31 @@ button.DocSearch.DocSearch-Button {
   margin-right: 68px;
   justify-content: center;
   background-image: url(/static/img/searchLight.svg);
+  border-radius: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 300ms ease-in-out;
+  background-color: var(--ifm-color-home-elevation-01);
+}
+button.DocSearch.DocSearch-Button:hover,
+button.DocSearch.DocSearch-Button:active,
+button.DocSearch.DocSearch-Button:focus {
+  box-shadow: none;
+  background-color: var(--ifm-color-home-elevation-02);
 }
 [data-theme='dark'] button.DocSearch.DocSearch-Button {
   background-image: url(/static/img/searchDark.svg);
+  background-color: var(--ifm-color-home-elevation-03);
+}
+[data-theme='dark'] button.DocSearch.DocSearch-Button:hover,
+[data-theme='dark'] button.DocSearch.DocSearch-Button:active {
+  background-color: var(--ifm-color-home-elevation-04);
 }
 .navbar__inner .navbar__items.navbar__items--right > div:nth-child(2) {
   position: static;
   padding: 0;
 }
-@media (min-width: 996px) {
+@media (min-width: 997px) {
   button.DocSearch.DocSearch-Button {
     margin-right: 0;
   }
@@ -340,12 +374,32 @@ button.DocSearch.DocSearch-Button {
 }
 .navbar__items.navbar__items--right > div:first-child > button.clean-btn {
   background-image: url(/static/img/toggleModeLight.svg);
+  border-radius: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 300ms ease-in-out;
+  background-color: var(--ifm-color-home-elevation-01);
+}
+.navbar__items.navbar__items--right > div:first-child > button.clean-btn:hover,
+.navbar__items.navbar__items--right > div:first-child > button.clean-btn:active {
+  background-color: var(--ifm-color-home-elevation-02);
 }
 [data-theme='dark']
   .navbar__items.navbar__items--right
   > div:first-child
   > button.clean-btn {
   background-image: url(/static/img/toggleModeDark.svg);
+  background-color: var(--ifm-color-home-elevation-03);
+}
+[data-theme='dark']
+  .navbar__items.navbar__items--right
+  > div:first-child
+  > button.clean-btn:hover,
+[data-theme='dark']
+  .navbar__items.navbar__items--right
+  > div:first-child
+  > button.clean-btn:active {
+  background-color: var(--ifm-color-home-elevation-04);
 }
 
 /* Sidebar Toggle color mode icon */
@@ -358,12 +412,26 @@ button.clean-btn.navbar-sidebar__close {
   width: 3rem;
   height: 3rem;
   background-image: url(/static/img/closeLight.svg);
+  border-radius: 48px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 300ms ease-in-out;
+  background-color: var(--ifm-color-home-elevation-01);
+}
+button.clean-btn.navbar-sidebar__close:hover,
+button.clean-btn.navbar-sidebar__close:active,
+button.clean-btn.navbar-sidebar__close:focus {
+  background-color: var(--ifm-color-home-elevation-02);
 }
 button.clean-btn.navbar-sidebar__close > svg {
   display: none;
 }
 [data-theme='dark'] button.clean-btn.navbar-sidebar__close {
   background-image: url(/static/img/closeDark.svg);
+}
+[data-theme='dark'] button.clean-btn.navbar-sidebar__close:hover,
+[data-theme='dark'] button.clean-btn.navbar-sidebar__close:active {
+  background-color: var(--ifm-color-home-elevation-04);
 }
 
 /* Sidebar UI */

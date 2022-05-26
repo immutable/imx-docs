@@ -1,10 +1,6 @@
-import DiscordDarkIcon from '@site/static/icons/DiscordDark'
 import FooterODarkIcon from '@site/static/icons/FooterODark'
 import FooterSDarkIcon from '@site/static/icons/FooterSDark'
 import FooterXDarkIcon from '@site/static/icons/FooterXDark'
-import RedditDarkIcon from '@site/static/icons/RedditDark'
-import TelegramDarkIcon from '@site/static/icons/TelegramDark'
-import TwitterDarkIcon from '@site/static/icons/TwitterDark'
 import clsx from 'clsx'
 import React from 'react'
 import styles from './styles.module.css'
@@ -12,10 +8,6 @@ import { useColorMode } from '@docusaurus/theme-common'
 import FooterOLightIcon from '@site/static/icons/FooterOLight'
 import FooterSLightIcon from '@site/static/icons/FooterSLight'
 import FooterXLightIcon from '@site/static/icons/FooterXLight'
-import DiscordLightIcon from '@site/static/icons/DiscordLight'
-import RedditLightIcon from '@site/static/icons/RedditLight'
-import TelegramLightIcon from '@site/static/icons/TelegramLight'
-import TwitterLightIcon from '@site/static/icons/TwitterLight'
 
 const Footer = () => {
   const theme = useColorMode()
@@ -25,8 +17,35 @@ const Footer = () => {
       <div>
         <p className={styles.footerText}>Made for people who love the world of NFTs</p>
         <p className={clsx(styles.footerText, styles.displayFromSmall)}>
-          IMX Whitepaper • IMX Tokenomics • API •  SDK •  Immutascan.io • Careers at
-          Immutable
+          <a
+            href="https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper"
+            className="hyperlink"
+          >
+            IMX Whitepaper
+          </a>{' '}
+          •{' '}
+          <a
+            href="https://support.immutable.com/hc/en-us/articles/4404531555855-Immutable-X-Token"
+            className="hyperlink"
+          >
+            IMX Tokenomics
+          </a>{' '}
+          •{' '}
+          <a href="/" className="hyperlink">
+            API
+          </a>{' '}
+          •{' '}
+          <a href="/" className="hyperlink">
+            SDK
+          </a>{' '}
+          •{' '}
+          <a href="https://immutascan.io/" className="hyperlink">
+            Immutascan.io
+          </a>{' '}
+          •{' '}
+          <a href="https://www.immutable.com/careers" className="hyperlink">
+            Careers at Immutable
+          </a>
         </p>
       </div>
       <div className={styles.iconsContainer}>
@@ -46,21 +65,10 @@ const Footer = () => {
           )}
         </div>
         <div className={styles.center}>
-          {theme.colorMode === 'dark' ? (
-            <>
-              <DiscordDarkIcon className={styles.footerIcon} />
-              <TwitterDarkIcon className={styles.footerIcon} />
-              <TelegramDarkIcon className={styles.footerIcon} />
-              <RedditDarkIcon className={styles.footerIcon} />
-            </>
-          ) : (
-            <>
-              <DiscordLightIcon className={styles.footerIcon} />
-              <TwitterLightIcon className={styles.footerIcon} />
-              <TelegramLightIcon className={styles.footerIcon} />
-              <RedditLightIcon className={styles.footerIcon} />
-            </>
-          )}
+          <button className={clsx(styles.socialIcons, styles.discord)} />
+          <button className={clsx(styles.socialIcons, styles.twitter)} />
+          <button className={clsx(styles.socialIcons, styles.telegram)} />
+          <button className={clsx(styles.socialIcons, styles.reddit)} />
         </div>
       </div>
     </div>

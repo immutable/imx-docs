@@ -17,20 +17,13 @@ const StatisticsCard = ({
   image,
 }: StatisticsCardProps) => {
   return (
-    <div
-      className={styles.cardContainer}
-      style={{
-        // background: `linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)), ${
-        //   require('/static/img/vyWorlds.png').default
-        // }`,
-        backgroundSize: 'cover',
-      }}
-    >
-      <div>
+    <div className={styles.cardContainer}>
+      <div className={styles.imageContainer}></div>
+      <div className={styles.titleContainer}>
         <h1 className={styles.statisticsNumber}>{statisticsNumber}</h1>
         <p className={styles.statisticsLabel}>{statisticsLabel}</p>
       </div>
-      <div>
+      <div className={styles.subtitleContainer}>
         <h3 className={styles.subtitle}>{subtitle}</h3>
         <p className={styles.description}>{description}</p>
       </div>

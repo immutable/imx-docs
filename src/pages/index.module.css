@@ -10,6 +10,7 @@
 }
 [data-theme='dark'] .root {
   background: url('/static/img/darkTile.png');
+  background-repeat: repeat;
 }
 
 /* Hero Section */

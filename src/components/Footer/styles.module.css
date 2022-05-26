@@ -11,12 +11,13 @@
 
 .footerText {
   composes: text-body-01 from '../../css/custom.css';
-  color: #1c1f27;
+  color: var(--ifm-color-home-text-primary);
   text-align: left;
   margin: 0;
 }
-[data-theme='dark'] .footerText {
-  color: #c1c1c1;
+.footerText > a {
+  color: var(--ifm-color-home-text-primary);
+  text-decoration: none;
 }
 
 .footerIcon {
@@ -42,8 +43,59 @@
   display: none;
 }
 
+.socialIcons {
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: background-color 300ms ease-in-out;
+  background-color: var(--ifm-color-home-elevation-01);
+}
+.socialIcons:hover,
+.socialIcons:active {
+  background-color: var(--ifm-color-home-elevation-02);
+}
+[data-theme='dark'] .socialIcons {
+  background-color: var(--ifm-color-home-elevation-03);
+}
+[data-theme='dark'] .socialIcons:hover,
+[data-theme='dark'] .socialIcons:active {
+  background-color: var(--ifm-color-home-elevation-04);
+}
+
+.discord {
+  background-image: url(/static/img/discordLight.svg);
+}
+[data-theme='dark'] .discord {
+  background-image: url(/static/img/discordDark.svg);
+}
+.twitter {
+  background-image: url(/static/img/twitterLight.svg);
+}
+[data-theme='dark'] .twitter {
+  background-image: url(/static/img/twitterDark.svg);
+}
+.telegram {
+  background-image: url(/static/img/telegramLight.svg);
+}
+[data-theme='dark'] .telegram {
+  background-image: url(/static/img/telegramDark.svg);
+}
+.reddit {
+  background-image: url(/static/img/redditLight.svg);
+}
+[data-theme='dark'] .reddit {
+  background-image: url(/static/img/redditDark.svg);
+}
+
 @media (min-width: 640px) {
-  .footerIcon {
+  .footerIcon,
+  .socialIcons {
     width: 48px;
     height: 48px;
   }

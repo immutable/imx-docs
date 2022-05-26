@@ -36,9 +36,7 @@
   transition: background 300ms ease-out;
   cursor: pointer;
 }
-.solidButton:hover {
-  background: var(--ifm-color-home-elevation-02);
-}
+.solidButton:hover,
 .solidButton:active {
   background: var(--ifm-color-home-elevation-02);
 }
@@ -47,6 +45,6 @@
   background: var(--ifm-color-home-elevation-03);
 }
 [data-theme='dark'] .solidButton:hover,
-.solidButton:active {
+[data-theme='dark'] .solidButton:active {
   background: var(--ifm-color-home-elevation-04);
 }

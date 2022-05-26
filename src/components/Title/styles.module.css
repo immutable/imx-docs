@@ -16,8 +16,7 @@
 }
 
 .subtitle {
-  composes: text-heading-04 from '../../css/custom.css';
-  font-weight: 300;
+  composes: text-body-01 from '../../css/custom.css';
   margin: 0;
   text-align: center;
   color: var(--ifm-color-home-text-primary);

@@ -1,22 +1,36 @@
 .cardContainer {
-  border-radius: 1rem;
-  padding: 2.5rem;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
   height: 320px;
-  background-size: cover;
-  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  border-radius: 1rem;
 }
 
-.cardContainer:first-child {
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  transition: all 400ms;
+}
+.cardContainer:hover .imageContainer,
+.cardContainer:focus .imageContainer {
+  transform: scale(1.05);
+}
+
+.cardContainer:first-child > .imageContainer {
   background: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
     url(/static/img/vyWorlds.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
-.cardContainer:nth-child(2) {
+.cardContainer:nth-child(2) > .imageContainer {
   background: linear-gradient(0deg, rgba(19, 19, 19, 0.5), rgba(19, 19, 19, 0.5)),
     url(/static/img/illuvium.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .statisticsNumber {
@@ -27,7 +41,7 @@
 }
 
 .statisticsLabel {
-  composes: text-body-03-emphasis from '../../css/custom.css';
+  composes: text-body-03 from '../../css/custom.css';
   color: #ffffff;
   text-align: center;
   margin: 0;
@@ -49,16 +63,37 @@
   margin-top: 0.5rem;
 }
 
+.titleContainer {
+  position: absolute;
+  top: 40px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+.subtitleContainer {
+  position: absolute;
+  bottom: 40px;
+  width: 100%;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
 @media (min-width: 640px) {
-  .cardContainer {
-    padding: 3.75rem 5rem;
+  .titleContainer {
+    top: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .subtitleContainer {
+    bottom: 60px;
+    padding-left: 80px;
+    padding-right: 80px;
   }
 }
 
 @media (min-width: 768px) {
   .cardContainer {
     height: 520px;
-    padding: 3.5rem 4rem 2.875rem 4rem;
   }
   .statisticsNumber {
     font-family: 'Suisse-Intl';
@@ -66,5 +101,15 @@
     font-weight: 700;
     font-size: 64px;
     line-height: 72px;
+  }
+  .titleContainer {
+    top: 56px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .subtitleContainer {
+    bottom: 46px;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 }
