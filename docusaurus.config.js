@@ -3,20 +3,57 @@
 
 const lightCodeTheme = require('prism-react-renderer/themes/github')
 const darkCodeTheme = require('prism-react-renderer/themes/dracula')
-const { default: React } = require('react')
+const { ProvidePlugin } = require('webpack')
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
+  i18n: {
+    defaultLocale: 'en',
+    locales: ['en'],
+  },
   title: 'Immutable X Documentation',
   tagline:
     'Experience zero gas fees, instant trades, and carbon neutral NFTs for marketplaces, games, and applications without compromise. Build your NFT business in hours with our APIs.',
-  url: 'https://docs.immutable.com',
+  url: 'https://beta.docs.x.immutable.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon-32x32.png',
   organizationName: 'immutable', // Usually your GitHub org/user name.
   projectName: 'imx-docs', // Usually your repo name.
+
+  plugins: [
+    () => ({
+      name: 'custom-webpack-config',
+      configureWebpack(config) {
+        return {
+          module: {
+            rules: [
+              {
+                test: /\.m?js/,
+                resolve: {
+                  fullySpecified: false,
+                },
+              },
+            ],
+          },
+          plugins: [
+            new ProvidePlugin({
+              process: require.resolve('process/browser'),
+            }),
+          ],
+          resolve: {
+            fallback: {
+              stream: require.resolve('stream-browserify'),
+              path: require.resolve('path-browserify'),
+              buffer: require.resolve('buffer/'),
+              url: require.resolve('url/'),
+            },
+          },
+        }
+      },
+    }),
+  ],
 
   presets: [
     [
@@ -26,11 +63,15 @@ const config = {
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl: 'https://github.com/immutable/imx-docs/tree/main/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
+        },
+        sitemap: {
+          changefreq: 'weekly',
+          priority: 0.5,
+          ignorePatterns: ['/tags/**'],
         },
       }),
     ],
@@ -59,7 +100,7 @@ const config = {
           },
           {
             type: 'doc',
-            docId: 'overview/welcome',
+            docId: '/reference',
             position: 'left',
             label: 'APIs',
           },
@@ -70,25 +111,25 @@ const config = {
             docId: 'guides/getting-started-guide',
           },
           {
-            to: 'https://abc.com',
+            to: 'https://support.immutable.com/hc/en-us/articles/4405227590799-Immutable-X-Whitepaper',
             label: 'IMX Whitepaper',
             position: 'left',
             className: 'custom_sidebar_menu',
           },
           {
-            to: 'https://abc.com',
+            to: 'https://support.immutable.com/hc/en-us/articles/4404531555855-Immutable-X-Token',
             label: 'IMX Tokenomics',
             position: 'left',
             className: 'custom_sidebar_menu',
           },
           {
-            to: 'https://abc.com',
+            to: 'https://immutascan.io/',
             label: 'Immutascan.io',
             position: 'left',
             className: 'custom_sidebar_menu',
           },
           {
-            to: 'https://abc.com',
+            to: 'https://www.immutable.com/careers',
             label: 'Careers at immutable',
             position: 'left',
             className: 'custom_sidebar_menu',
@@ -109,6 +150,7 @@ const config = {
         appId: '2KKA2HFUSD',
         apiKey: '2cb7547e9bf1ee7ee1b033acb6387c1d', // Public API key: it is safe to commit it
         indexName: 'dev_imxdocs',
+        contextualSearch: true,
       },
     }),
 }

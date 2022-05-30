@@ -8,9 +8,11 @@ import { useColorMode } from '@docusaurus/theme-common'
 import FooterOLightIcon from '@site/static/icons/FooterOLight'
 import FooterSLightIcon from '@site/static/icons/FooterSLight'
 import FooterXLightIcon from '@site/static/icons/FooterXLight'
+import { useHistory } from '@docusaurus/router'
 
 const Footer = () => {
   const theme = useColorMode()
+  let history = useHistory()
 
   return (
     <div className={styles.footerContainer}>
@@ -31,11 +33,11 @@ const Footer = () => {
             IMX Tokenomics
           </a>{' '}
           •{' '}
-          <a href="/" className="hyperlink">
+          <a href="/reference" className="hyperlink">
             API
           </a>{' '}
           •{' '}
-          <a href="/" className="hyperlink">
+          <a href="/guides/getting-started-guide" className="hyperlink">
             SDK
           </a>{' '}
           •{' '}
@@ -65,10 +67,22 @@ const Footer = () => {
           )}
         </div>
         <div className={styles.center}>
-          <button className={clsx(styles.socialIcons, styles.discord)} />
-          <button className={clsx(styles.socialIcons, styles.twitter)} />
-          <button className={clsx(styles.socialIcons, styles.telegram)} />
-          <button className={clsx(styles.socialIcons, styles.reddit)} />
+          <button
+            onClick={() => history.push('https://discord.gg/6GjgPkp464')}
+            className={clsx(styles.socialIcons, styles.discord)}
+          />
+          <button
+            onClick={() => history.push('https://twitter.com/Immutable')}
+            className={clsx(styles.socialIcons, styles.twitter)}
+          />
+          <button
+            onClick={() => history.push('https://discord.gg/6GjgPkp464')}
+            className={clsx(styles.socialIcons, styles.telegram)}
+          />
+          <button
+            onClick={() => history.push('https://discord.gg/6GjgPkp464')}
+            className={clsx(styles.socialIcons, styles.reddit)}
+          />
         </div>
       </div>
     </div>
