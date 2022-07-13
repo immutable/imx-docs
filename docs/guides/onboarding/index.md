@@ -5,7 +5,7 @@ slug: "/onboarding"
 Below is a high-level overview of the steps required to onboard with Immutable X.
 
 # Before you start
-The Immutable X test environment uses Ropsten. If you haven’t already, get [prepared to test](./getting-started-guide.md#prepare-to-test) with an Ethereum wallet and some test ETH. You also need to [register as a user(getting-started-guide.md#register-a-user-account) before you can register a project.
+The Immutable X test environment uses Ropsten. If you haven’t already, get [prepared to test](./getting-started-guide.md#prepare-to-test) with an Ethereum wallet and some test ETH. You also need to [register as a user](getting-started-guide.md#register-a-user-account) before you can register a project.
 :::info Common Terms
 The following explains a couple of Immutable X terms used throughout our guides:
 
