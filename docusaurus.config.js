@@ -150,9 +150,9 @@ const config = {
         additionalLanguages: ['solidity'],
       },
       algolia: {
-        appId: '2KKA2HFUSD',
-        apiKey: '2cb7547e9bf1ee7ee1b033acb6387c1d', // Public API key: it is safe to commit it
-        indexName: 'prod_imxdocs',
+        appId: '9WZROGGS1R',
+        apiKey: '68314d39481ee96c026affcd3b8d174e', // Public API key: it is safe to commit it
+        indexName: 'immutable-x',
         contextualSearch: true,
       },
     }),
