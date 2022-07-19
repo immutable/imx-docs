@@ -33,6 +33,7 @@ export default function APIPage() {
           const { API } = require('@stoplight/elements');
           return (
             <>
+              <div>Switcher Goes here!</div>
               <API
                 apiDescriptionUrl="https://api.ropsten.x.immutable.com/openapi-docs"
                 router="hash"

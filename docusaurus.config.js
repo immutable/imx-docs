@@ -23,6 +23,7 @@ const config = {
   favicon: 'img/favicon.png',
   organizationName: 'immutable', // Usually your GitHub org/user name.
   projectName: 'imx-docs', // Usually your repo name.
+  staticDirectories: ['api-docs'],
 
   plugins: [
     () => ({
