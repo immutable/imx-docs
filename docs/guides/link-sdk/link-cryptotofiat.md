@@ -56,3 +56,7 @@ await link.cryptoToFiat({ cryptoCurrencies: ['ETH'], amount: '0.01' })
 This displays the Link UI with loaded Moonpay widget:
 
 ![Offramp with specific currency and amount](../../../static/img/link-sdk-cryptotofiat/offramp-with-currency-and-amount.png 'Offramp with specific currency and amount')
+
+## Errors
+
+See error responses [here](./link-errors.md#fiat-to-crypto).
