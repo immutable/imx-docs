@@ -14,9 +14,7 @@ To start, here are some explanations of common terms:
 
 ## Trading fees
 
-Here's a breakdown of current and future trading fees:
-
-<table><thead><tr><th>Fee</th><th>Description</th><th>Current Value</th></tr></thead><tbody><tr><td>Protocol fee (coming soon)</td><td>Fee to support the ongoing development and maintenance of the Immutable X ecosystem.</td><td>2% of the base price</td></tr><tr><td>Maker fee</td><td>Fee to support maker marketplace for providing liquidity.<br />
+<table><thead><tr><th>Fee</th><th>Description</th><th>Current Value</th></tr></thead><tbody><tr><td>Protocol fee</td><td>Exchange fee on transasctions, to support the ongoing development and maintenance of the Immutable X ecosystem. <br /><br />See this <a href="https://immutablex.medium.com/fees-on-immutable-x-79d3e7207b12">blog post</a> for more information.</td><td>2% of an item's traded price, in the currency of the trade</td></tr><tr><td>Maker fee</td><td>Fee to support maker marketplace for providing liquidity.<br />
 Requires &gt;=v1.3.49 of the SDK to set maker fees.</td><td>x%<br /><br />
 Set by the maker marketplace when listing an asset for sale</td></tr><tr><td>Taker fee</td><td>Fee to support taker marketplace for providing liquidity.<br />
 Requires &gt;=v1.3.49 of the SDK to set maker fees.</td><td>x%<br /><br />
