@@ -42,10 +42,10 @@ If your contribution is a massive effort or if you're doing a major restructure 
 
 ## Contribute Immutable X Docs:
 
-There are a couple of ways to contribute to the [Immutable X Docs:](https://github.com/immmutable/imx-docs)
+There are a couple of ways to contribute to the [Immutable X Docs:](https://github.com/immutable/imx-docs)
 
-1. [Send a pull request (PR) with changes](contributing.md)
-2. [Reporting an issue](contributing.md)
+1. [Send a pull request (PR) with changes](https://github.com/immutable/imx-docs/pulls)
+2. [Reporting an issue](https://github.com/immutable/imx-docs/issues)
 
 ### Send a Pull Request (PR) with Changes
 
