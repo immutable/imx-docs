@@ -28,8 +28,8 @@ createERC721Token(token_address, token_id) {
     return {
         type: ERC721TokenType.ERC721,
         data: {
-            tokenAddress: token_address,
-            tokenId: token_id,
+            token_address: token_address,
+            token_id: token_id,
         }
     }
 }
@@ -50,7 +50,7 @@ createCoinToken(tokenSymbol) {
             data: {
                 symbol: tokenSymbol,
                 decimals: whitelistedTokens[tokenSymbol].decimals, 
-                tokenAddress: whitelistedTokens[tokenSymbol].token_address
+                token_address: whitelistedTokens[tokenSymbol].token_address
             }
         }
     }
@@ -67,7 +67,7 @@ const orderParameters = {
     token_buy: createCoinToken("ETH")
     token_sell: createERC721Token(token_address, token_id)
     // The ETH address of the L1 Wallet
-    user: await L1OrderSigner.getAddress(),
+    user: await l1Signer.getAddress(),
 };
 // call the workflow method. This method will call https://docs.x.immutable.com/reference/#/operations/createOrder
 await workflows.createOrderWithSigner(wc, orderParameters).then(res => {
