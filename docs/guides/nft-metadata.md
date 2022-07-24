@@ -100,7 +100,7 @@ The table below gives a short summary of the differences:
 
 ## Examples
 
-These examples follow the [NFT Minting Tutorial](./zero-to-hero-nft-minting/).
+These examples follow the [NFT Minting Tutorial](./zero-to-hero-nft-minting).
 
 ### On-Chain 🔗
 
@@ -139,7 +139,7 @@ A large majority of metadata is stored off-chain. Projects are expected to self-
 
 When registering your collection's contract with Immutable X, you need to provide a metadata API endpoint for us to retrieve metadata properties for each of your NFTs. 
 
-If you follow along with the [NFT Minting Tutorial](./nft-metadata), you'll notice that on step 5 you use pinata.cloud to store your NFT metadata and generate a metadata API URL that you  use when you register a collection on step 13.
+If you follow along with the [NFT Minting Tutorial](./zero-to-hero-nft-minting), you'll notice that on step 5 you use pinata.cloud to store your NFT metadata and generate a metadata API URL that you  use when you register a collection on step 13.
 
 The JSON stored on pinata.cloud looks like this:
 ```
